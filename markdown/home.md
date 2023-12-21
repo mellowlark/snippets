@@ -1,4 +1,4 @@
-# <center>Welcome</center>
+# <p align="center" width="100%">Welcome</p>  
 
 #### My Man Pages:
 - [AppScan Misc](./docs/appscanmisc.md)
