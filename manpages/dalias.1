@@ -1,0 +1,36 @@
+.TH DALIAS 1 "24 Dec 2023" "" "" "" ""
+.SH NAME
+\fBdalias\fR \- Docker alias reminders
+.SH DESCRIPTION
+Aliases I've configured. They still require all the switches and options to be passed in via the command line.
+.SH OPTIONS
+\fBdalias\fR lists aliased version of common docker commands
+.SS General
+.TP
+\fBdkr\fR
+.P
+Shortcut for Docker
+.SS Build
+.TP
+\fBdib\fR: docker build
+.PP
+Builds Docker image from Dockerfile
+.SS Image
+.TP
+\fBdil\fR: docker images
+.P
+Lists docker images
+.TP
+\fBdilf\fR: calls function dockerListFormattedImages
+.P
+Formats the list of images for easier viewing.
+.SS Container
+.TP
+\fBdcp\fR: docker container ps
+.P
+Returns the list of all running containers.
+Add \-a to include the stopped containers.
+.TP
+\fBdcr\fR docker container run.
+.P
+Runs a container
