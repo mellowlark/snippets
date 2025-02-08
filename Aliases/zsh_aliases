@@ -1,0 +1,67 @@
+## Mac Aliases
+# Aliases:
+# my defaults:
+alias c='clear'
+alias cls='clear'
+alias dir='ls'
+alias l='ls -1'
+alias ll='ls -lht'
+alias ld='ls -ld */'
+alias lf='ls -l|grep ^-'
+alias lh='ls -dp .* 2>/dev/null'
+alias lsa='ls -a'
+alias hg='history -200 |grep -i'
+alias edal='vi ~/.zshrc'
+alias sb='source ~/.zshrc'
+alias pg='ps -ef |grep -i'
+alias ag='alias |grep -i'
+alias h='history -50'
+alias ping='ping -c 4'
+alias locate='locate -i'
+
+# MacOS specific
+alias sleepdisplay='pmset displaysleepnow'
+alias wolo='wakeonlan 50:9A:4C:52:C3:9B'
+alias wireshark='open -n /Applications/Wireshark.app'
+
+# remote host
+alias ssh='ssh ' # The space lets it accept other aliases as an argument
+alias alpineb='root@192.168.1.14 -p 3332'
+alias basea='root@192.168.1.14 -p 3332'
+alias rhl='192.168.1.14 -p 5022'
+alias rhlr='root@192.168.1.14 -p 5022'
+
+# virtualbox
+alias vbml='vboxmanage list'
+alias vbmlr='vboxmanage list runningvms'
+alias vbmla='vboxmanage list vms'
+alias vbmh='vboxmanage --help'
+alias vbm='vboxmanage'
+alias stkubea='vboxmanage startvm alpinebase ctlnodea nodea-0 nodea-1 --type headless'
+
+# containerization
+alias d='docker '
+alias dps='docker ps -a'
+alias clist='docker container ls --format "table {{.ID}}\t{{.Image}}\t{{.Names}}"'
+alias ilist='docker images --format "Tag {{.Tag}}:\t{{.Repository}}"'
+alias plist='kubectl get pods -A'
+alias di='docker images'
+alias docker='docker '
+alias stopdocker='osascript -e quit app "Docker"'
+alias startdocker='open -a Docker'
+
+alias mk='minikube'
+alias k='kubectl'
+alias kg='kubectl get'
+alias kgp='kubectl get pods -A'
+alias kgn='kubectl get nodes'
+alias kgns='kubectl get namespaces'
+
+# other
+alias t=task
+alias tl='task --list-all'
+alias cdb='cd ~/vscode/sc-github/bitbucket-asoc-sast/linux'
+alias pyv='source ~/vscode/sc-github/bitbucket-asoc-sast/linux/.venv/bin/activate'
+alias appscan='/opt/SAClientUtil/bin/appscan.sh'
+alias mp='multipass'
+ 
