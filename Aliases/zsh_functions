@@ -1,0 +1,56 @@
+# Functions
+function fhg() { # greps the actual hstory file
+  grep -i $1 ~/.zsh_history
+  }
+function glocate() { # adds a grep option to locate
+  locate -i $1 |grep ${2}$
+  }
+function wakevm() {
+  VBoxManage controlvm "JumpBox-Xubuntu.24.04" savestate
+  sleep 10
+  VBoxManage startvm "JumpBox-Xubuntu.24.04" --type headless
+  }
+
+# my man page functions
+function myman() {
+  vi -u ~/Documents/MyManPages/${1}/.vbmanrc ~/Documents/MyManPages/${1}/${1}.man
+  }
+
+function vbman() {
+  vi -u ~/Documents/MyManPages/vbman/.vbmanrc ~/Documents/MyManPages/vbman/${1}.man
+  }
+
+function kubeman() {
+  vi -u ~/Documents/MyManPages/kubeman/.vbmanrc ~/Documents/MyManPages/kubeman/${1}.man
+  }
+
+# starting the KTHW VMs
+function startkthw() {
+  for host in base ctlnode node-0 node-1; do
+  vboxmanage startvm $host --type headless
+  done
+  }
+# Stopping the KTHW VMs (probably doesn't work)
+function stopkthw() {
+        for host in node-0 node-1 ctlnode base; do
+                ssh $host sudo shutdown now
+        done
+}
+# saves the state of the alpine kubernetes vms
+# to prevent them from being forcibly stopped when shutting down.
+function sskubea() {
+  for host in alpinebase ctlnodea nodea-0 nodea-1; do
+    echo Saving ${host}\'s state
+    vboxmanage controlvm $host savestate
+  done
+}
+# Think this is an attempt to easily set the kube config file
+# for muliple kubernetes enviroments.
+function setc() {
+  cfg=config
+  if [[ "$1" =~ "i" ]]
+  then
+    cfg=ingress-config
+  fi
+  export KUBECONFIG=/Users/jimmy/.kube/$cfg
+}
