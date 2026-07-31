@@ -15,7 +15,7 @@ return
 else
         folders=("/dev" "/etc" "/home" "/media" "/opt" "/run" "/srv" "/tmp" "/usr" "/var")
         for f in ${folders[*]};do
-                find $f -name $argv
+                find $f -name $1
         done
 fi
 }
