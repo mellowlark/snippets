@@ -50,3 +50,7 @@ elif [ $argv ]; then
         else
                 echo invalid argument: $argv
                 help
+        fi
+else
+    echo "Invalid choice [${argv}]..."
+fi
