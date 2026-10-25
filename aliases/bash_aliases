@@ -19,3 +19,26 @@ else
         done
 fi
 }
+
+# Help series
+# Snipets for commands when I need a reminder
+function kh() { #kubectl
+echo waiting for input
+}
+
+
+function dh() { #docker
+echo waiting for input
+}
+
+function wh() { #wsl
+echo waiting for input
+}
+
+# grep help output
+alias khg='kh |grep -i '
+alias dhg='dh |grep -i '
+alias whg='wh |grep -i '
+
+# test
+alias getbash='curl https://raw.githubusercontent.com/mellowlark/snippets/refs/heads/master/aliases/bash_aliases'
