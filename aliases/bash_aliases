@@ -41,4 +41,4 @@ alias dhg='dh |grep -i '
 alias whg='wh |grep -i '
 
 # test
-alias getbash='curl https://raw.githubusercontent.com/mellowlark/snippets/refs/heads/master/aliases/bash_aliases'
+alias getbash='curl --silent https://raw.githubusercontent.com/mellowlark/snippets/refs/heads/master/aliases/bash_aliases --stderr - |grep -i '
